@@ -5,6 +5,53 @@ body {
   .font-playfair {
     font-family: 'Playfair Display', serif;
   }
+
+  .h1{
+    color: #500;
+    text-align: center;
+    font-family: "Roboto Serif";
+    font-size: clamp(24px, 5vw, 48px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40.437px; /* 84.243% */
+    letter-spacing: clamp(1px, 0.3vw, 2.4px);
+    margin-bottom: 0.5rem;
+  }
+  
+  .h2{
+    color: #500;
+    font-family: "Roboto Serif";
+    font-size: clamp(18px, 3vw, 32px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40.437px; /* 126.562% */
+  }
+  
+  .h3{
+    color: #500;
+    text-align: center;
+    font-family: "Roboto Serif";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40.437px; /* 101.091% */
+    letter-spacing: 2px;
+  }
+
+  .normal-text {
+    color: #000;
+    font-family: 'Lora', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(16px, 2vw, 24px);
+    line-height: clamp(28px, 4vw, 48px);
+  }
+
+  .text-overlay {
+    width: clamp(180px, 20vw, 264px); /* same as image */
+    margin: 0 auto;                    /* centers text under image */
+    text-align: center;
+  }
   
   .navbar {
     min-height: 30px; 
@@ -76,26 +123,6 @@ body {
     line-height: normal;
     letter-spacing: 1.2px;
   }
-
-  .h1{
-    color: #500;
-    text-align: center;
-    font-family: "Roboto Serif";
-    font-size: clamp(24px, 5vw, 48px);
-    font-style: normal;
-    font-weight: 700;
-    line-height: 40.437px; /* 84.243% */
-    letter-spacing: 2.4px;
-  }
-  
-  .h2{
-    color: #500;
-    font-family: "Roboto Serif";
-    font-size: clamp(18px, 3vw, 32px);
-    font-style: normal;
-    font-weight: 600;
-    line-height: 40.437px; /* 126.562% */
-  }
   
   .phone_icon {
     width: clamp(4px, 20vw, 30px);
@@ -105,12 +132,15 @@ body {
   }
 
   .hero {
-    height: 100vh; /* full viewport height */
-    background: 
-      linear-gradient(0deg, rgba(217, 217, 217, 0.30) 0%, rgba(217, 217, 217, 0.30) 100%),
-      url("../images/landing_image.jpg") no-repeat center center / cover;
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
     position: relative;
+    width: 100%;
+    height: 95vh; 
+    aspect-ratio: 1458 / 615; /* modern browsers */
+    background: 
+      linear-gradient(0deg, rgba(217, 217, 217, 0.5) 0%, rgba(217, 217, 217, 0.45) 100%),
+      url("../images/painting/p1.jpeg") no-repeat center center / cover;
+    filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.70));
+    background-position: 100% 75%; /* ensures the bottom of the image is visible */
   }
   
   .hero::before {
@@ -123,4 +153,23 @@ body {
   .hero .container {
     position: relative;
     z-index: 1; /* make sure text shows above overlay */
+  }
+
+  .container {
+    margin-top: 2rem;
+  }
+
+  .images-container {
+    width: clamp(180px, 20vw, 264px);
+    height: clamp(180px, 20vw, 264px);
+    flex-shrink: 0;
+    margin-bottom: 1rem;
+  }
+
+  .section-line {
+    width: 150px;
+    height: 2px;
+    background-color: #500;
+    margin: 0 auto 20px; /* centers and adds spacing below */
+  }
   
