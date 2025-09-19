@@ -108,6 +108,14 @@ body {
     font-weight: 600;
     line-height: normal;
   }
+  .footer-font {
+    color: #500;
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(2px, 2vw, 16px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
 
   .btn-pill {
     background-color: #500;    /* primary brand color */
